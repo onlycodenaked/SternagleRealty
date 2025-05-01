@@ -54,7 +54,7 @@ const SoldPage = () => {
             beds: 3,
             baths: 2.5,
             sqft: 1900,
-            photo: 'https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             soldDate: '2025-01-20'
           },
           {
@@ -64,7 +64,7 @@ const SoldPage = () => {
             beds: 4,
             baths: 3,
             sqft: 2400,
-            photo: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             soldDate: '2025-01-05'
           }
         ];

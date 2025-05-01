@@ -51,13 +51,13 @@ const HomePage = () => {
                 <div className="position-relative">
                   <Card.Img 
                     variant="top" 
-                    src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                    alt="Luxury Home in San Diego"
+                    src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                    alt="Home in San Diego"
                     style={{ height: '200px', objectFit: 'cover' }}
                   />
                 </div>
                 <Card.Body>
-                  <Card.Title className="fw-bold">Luxury Home in San Diego</Card.Title>
+                  <Card.Title className="fw-bold">Cozy Home in San Diego</Card.Title>
                   <p className="text-success fw-bold">$750,000</p>
                   <p className="text-secondary mb-3">3 beds • 2 baths • 1,500 sqft</p>
                   <Link to="/listings" className="text-decoration-none" style={{ color: 'var(--light-blue-1)' }}>View Details</Link>
@@ -70,12 +70,12 @@ const HomePage = () => {
               <Card className="h-100">
                 <Card.Img 
                   variant="top" 
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                  alt="Modern Condo in Los Angeles"
+                  src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                  alt="Modest Condo in Los Angeles"
                   style={{ height: '200px', objectFit: 'cover' }}
                 />
                 <Card.Body>
-                  <Card.Title className="fw-bold">Modern Condo in Los Angeles</Card.Title>
+                  <Card.Title className="fw-bold">Charming Condo in Los Angeles</Card.Title>
                   <p className="text-success fw-bold">$550,000</p>
                   <p className="text-secondary mb-3">2 beds • 2 baths • 1,200 sqft</p>
                   <Link to="/listings" className="text-decoration-none" style={{ color: 'var(--light-blue-1)' }}>View Details</Link>
@@ -88,7 +88,7 @@ const HomePage = () => {
               <Card className="h-100">
                 <Card.Img 
                   variant="top" 
-                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                  src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
                   alt="Family Home in Sacramento"
                   style={{ height: '200px', objectFit: 'cover' }}
                 />

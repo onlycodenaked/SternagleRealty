@@ -23,7 +23,7 @@ const ListingsPage = () => {
             beds: 3,
             baths: 2,
             sqft: 1500,
-            photo: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             description: 'Beautiful single-family home in a quiet neighborhood with excellent schools. Features include a renovated kitchen, hardwood floors, and a spacious backyard.',
             features: ['Renovated Kitchen', 'Hardwood Floors', 'Spacious Backyard', 'Attached Garage']
           },
@@ -34,7 +34,7 @@ const ListingsPage = () => {
             beds: 2,
             baths: 2,
             sqft: 1200,
-            photo: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             description: 'Modern condo in the heart of downtown with stunning city views. Features include stainless steel appliances, quartz countertops, and a private balcony.',
             features: ['City Views', 'Stainless Steel Appliances', 'Private Balcony', 'Fitness Center']
           },
@@ -45,7 +45,7 @@ const ListingsPage = () => {
             beds: 4,
             baths: 3,
             sqft: 2000,
-            photo: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             description: 'Spacious family home near parks and shopping. Features include an open floor plan, updated bathrooms, and a large fenced yard.',
             features: ['Open Floor Plan', 'Updated Bathrooms', 'Fenced Yard', 'Near Parks']
           },
@@ -56,7 +56,7 @@ const ListingsPage = () => {
             beds: 3,
             baths: 2.5,
             sqft: 1800,
-            photo: 'https://images.unsplash.com/photo-1575517111839-3a3843ee7f5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1598228723793-52759bba239c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             description: 'Charming Victorian home with modern updates. Features include original hardwood floors, bay windows, and a newly renovated kitchen.',
             features: ['Victorian Architecture', 'Bay Windows', 'Renovated Kitchen', 'Period Details']
           },
@@ -67,7 +67,7 @@ const ListingsPage = () => {
             beds: 4,
             baths: 3,
             sqft: 2200,
-            photo: 'https://images.unsplash.com/photo-1592595896551-12b371d546d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
+            photo: 'https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80',
             description: 'Contemporary home in a gated community with resort-style amenities. Features include high ceilings, a gourmet kitchen, and a three-car garage.',
             features: ['Gated Community', 'High Ceilings', 'Gourmet Kitchen', 'Three-Car Garage']
           }
