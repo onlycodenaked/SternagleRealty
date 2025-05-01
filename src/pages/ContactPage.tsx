@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Row, Col, Card, Form, Button, Spinner, Alert } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button, Spinner, Alert, Modal } from 'react-bootstrap';
 import { LeadFormData } from '../types';
 
 const ContactPage = () => {
@@ -12,6 +12,10 @@ const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [showVerification, setShowVerification] = useState(false);
+  
+  // For testing purposes only - to be removed before going live
+  const [tempFormData, setTempFormData] = useState<LeadFormData | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,22 +25,22 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  // For testing purposes only - to be removed before going live
+  const handleVerificationResponse = async () => {
+    setShowVerification(false);
     setIsSubmitting(true);
-    setSubmitError('');
-
+    
     try {
       // In a real application, we would save to Firestore
       // For now, we'll simulate a successful submission
-      console.log('Form data submitted:', formData);
+      console.log('Form data submitted:', tempFormData);
       
       // Simulate API delay
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       // This is how we would save to Firestore in a production environment
       // await addDoc(collection(db, 'leads'), {
-      //   ...formData,
+      //   ...tempFormData,
       //   timestamp: serverTimestamp()
       // });
 
@@ -47,6 +51,7 @@ const ContactPage = () => {
         phone: '',
         message: ''
       });
+      setTempFormData(null);
     } catch (error) {
       console.error('Error submitting form:', error);
       setSubmitError('There was an error submitting your information. Please try again later.');
@@ -55,8 +60,63 @@ const ContactPage = () => {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      // Store the form data temporarily
+      setTempFormData({...formData});
+      
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Show verification dialog instead of submitting directly
+      // This is for testing purposes only and should be removed before going live
+      setShowVerification(true);
+    } catch (error) {
+      console.error('Error processing form:', error);
+      setSubmitError('There was an error processing your information. Please try again later.');
+      setIsSubmitting(false);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="py-5 bg-light">
+      {/* Verification Modal - For testing purposes only, to be removed before going live */}
+      <Modal 
+        show={showVerification} 
+        onHide={() => setShowVerification(false)}
+        centered
+        backdrop="static"
+      >
+        <Modal.Header>
+          <Modal.Title>Verification Required</Modal.Title>
+        </Modal.Header>
+        <Modal.Body className="text-center py-4">
+          <p className="mb-4">Wait, we first need to confirm that you are not a bitch. Shannon does not work with bitches.</p>
+          <div className="d-flex justify-content-center gap-3">
+            <Button 
+              variant="success" 
+              onClick={handleVerificationResponse}
+              className="px-4"
+            >
+              No, I'm not a bitch
+            </Button>
+            <Button 
+              variant="danger" 
+              onClick={handleVerificationResponse}
+              className="px-4"
+            >
+              Yes, I'm a bitch 😢
+            </Button>
+          </div>
+        </Modal.Body>
+      </Modal>
+      
       <Container>
         <Row className="justify-content-center">
           <Col lg={10} xl={8}>
