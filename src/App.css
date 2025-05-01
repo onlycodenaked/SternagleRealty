@@ -1,0 +1,58 @@
+/* Global styles for the Bootstrap-based site */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contact page gradient background */
+.contact-info-gradient {
+  background: linear-gradient(to bottom, var(--light-blue-1), var(--light-green-1));
+}
+
+/* Hero section gradient */
+.hero-gradient {
+  background: linear-gradient(to right, var(--light-green-2), var(--light-blue-2));
+}
+
+/* CTA section gradient */
+.cta-section {
+  background: linear-gradient(to right, var(--light-blue-1), var(--light-green-1));
+}
+
+/* Testimonial card styling */
+.testimonial-card {
+  background-color: var(--light-blue-2);
+}
+
+/* Article content styling for resource articles */
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #374151;
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.article-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}

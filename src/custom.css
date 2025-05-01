@@ -1,0 +1,169 @@
+/* Custom CSS for Shannon Sternagle Real Estate */
+
+:root {
+  --light-green-1: #A8D5BA;
+  --light-green-2: #D4E9D7;
+  --light-blue-1: #A3BFFA;
+  --light-blue-2: #D6E4FF;
+  --white: #FFFFFF;
+  --gray-800: #343a40;
+  --gray-600: #6c757d;
+  --gray-200: #e9ecef;
+}
+
+/* Typography */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--gray-800);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+/* Custom Button Styles */
+.btn-primary-custom {
+  background-color: var(--light-blue-1);
+  border-color: var(--light-blue-1);
+  color: white;
+}
+
+.btn-primary-custom:hover {
+  background-color: var(--light-blue-2);
+  border-color: var(--light-blue-2);
+  color: var(--gray-800);
+}
+
+.btn-secondary-custom {
+  background-color: var(--light-green-1);
+  border-color: var(--light-green-1);
+  color: white;
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--light-green-2);
+  border-color: var(--light-green-2);
+  color: var(--gray-800);
+}
+
+/* Custom Card Styles */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section Gradient */
+.hero-gradient {
+  background: linear-gradient(to right, var(--light-green-2), var(--light-blue-2));
+}
+
+/* Footer Styles */
+.footer-link {
+  color: var(--gray-600);
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: var(--light-blue-1);
+  text-decoration: none;
+}
+
+/* Social Media Icons */
+.social-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--gray-600);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: var(--light-blue-1);
+  color: white;
+}
+
+/* Custom Navbar */
+.navbar-custom {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link-custom {
+  color: var(--gray-700);
+  transition: color 0.3s;
+}
+
+.nav-link-custom:hover {
+  color: var(--light-blue-1);
+}
+
+/* Property Listing Price Tag */
+.price-tag {
+  background-color: var(--light-green-1);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background-color: var(--light-blue-2);
+  border-radius: 0.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(to right, var(--light-blue-1), var(--light-green-1));
+  color: white;
+}
+
+/* Contact Form Sidebar */
+.contact-sidebar {
+  background: linear-gradient(to bottom, var(--light-blue-1), var(--light-green-1));
+  color: white;
+}
+
+/* Resource Article Content */
+.article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--gray-800);
+}
+
+.article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: var(--gray-800);
+}
+
+.article-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.article-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
