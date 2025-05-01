@@ -29,7 +29,7 @@ const HomePage = () => {
             {/* Hero Image */}
             <Col md={6} className="order-md-2 order-1 text-center">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                src="https://i.imgur.com/3MUxDwb.jpg" 
                 alt="Shannon Sternagle, Realtor" 
                 className="rounded-circle shadow border border-4 border-white"
                 style={{ width: '250px', height: '250px', objectFit: 'cover' }}
