@@ -104,6 +104,74 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--light-blue-1);
 }
 
+/* Tab-style navigation */
+.nav-tabs-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.nav-tabs-container {
+  width: 100%;
+  background: transparent;
+}
+
+.nav-tabs-inner {
+  display: flex;
+  justify-content: flex-start;
+  background: transparent;
+}
+
+/* Hide desktop navigation on mobile */
+@media (max-width: 767.98px) {
+  .nav-tabs {
+    display: none;
+  }
+}
+
+.nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: none;
+}
+
+.nav-tab {
+  margin-bottom: -1px;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid transparent;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  color: #333 !important; /* Match the heading text color */
+  font-weight: 500; /* Medium font weight for better readability */
+  font-size: 1rem;
+  text-decoration: none;
+  background-color: transparent; /* Transparent background for inactive tabs */
+  margin-right: 0.25rem;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0.02em; /* Slightly increased letter spacing for modern look */
+  font-family: 'Roboto', sans-serif; /* Using Roboto for a more modern look */
+}
+
+.nav-tab:hover {
+  border-color: #e9ecef #e9ecef #dee2e6;
+  background-color: #f8f9fa;
+  color: #333 !important; /* Match the heading text color */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-tab.active,
+.nav-tab[aria-current="page"] {
+  color: #333 !important; /* Match the heading text color */
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff;
+  font-weight: 600; /* Slightly bolder for active tab, but still readable */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Property Listing Price Tag */
 .price-tag {
   background-color: var(--light-green-1);

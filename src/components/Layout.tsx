@@ -29,21 +29,10 @@ const Layout = () => {
       </header>
       
       {/* Navigation - Tab style menu below brand */}
-      <div className="nav-tabs-container">
-        <Container>
-          <Navbar 
-            expand="md" 
-            className="navbar-custom py-0 border-0" 
-            expanded={expanded}
-          >
-            <Navbar.Toggle 
-              aria-controls="basic-navbar-nav" 
-              onClick={() => setExpanded(expanded ? false : true)}
-              aria-expanded={expanded}
-              aria-label="Toggle navigation"
-              className="ms-2 my-2 d-md-none"
-            />
-            <Navbar.Collapse id="basic-navbar-nav">
+      <div className="nav-tabs-wrapper">
+        <div className="nav-tabs-container">
+          <Container>
+            <div className="nav-tabs-inner">
               <Nav className="nav-tabs" role="navigation" aria-label="Main Navigation">
                 <Nav.Link as={Link} to="/" className={`nav-tab ${isActive('/') ? 'active' : ''}`} onClick={() => setExpanded(false)} aria-current={isActive('/') ? 'page' : undefined}>Home</Nav.Link>
                 <Nav.Link as={Link} to="/testimonials" className={`nav-tab ${isActive('/testimonials') ? 'active' : ''}`} onClick={() => setExpanded(false)} aria-current={isActive('/testimonials') ? 'page' : undefined}>Testimonials</Nav.Link>
@@ -52,9 +41,34 @@ const Layout = () => {
                 <Nav.Link as={Link} to="/resources" className={`nav-tab ${isActive('/resources') ? 'active' : ''}`} onClick={() => setExpanded(false)} aria-current={isActive('/resources') ? 'page' : undefined}>Resources</Nav.Link>
                 <Nav.Link as={Link} to="/contact" className={`nav-tab ${isActive('/contact') ? 'active' : ''}`} onClick={() => setExpanded(false)} aria-current={isActive('/contact') ? 'page' : undefined}>Contact</Nav.Link>
               </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        </Container>
+              
+              {/* Mobile navigation */}
+              <Navbar 
+                expand="md" 
+                className="d-md-none navbar-custom py-0 border-0" 
+                expanded={expanded}
+              >
+                <Navbar.Toggle 
+                  aria-controls="basic-navbar-nav" 
+                  onClick={() => setExpanded(expanded ? false : true)}
+                  aria-expanded={expanded}
+                  aria-label="Toggle navigation"
+                  className="ms-2 my-2"
+                />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="flex-column w-100">
+                    <Nav.Link as={Link} to="/" className="py-2" onClick={() => setExpanded(false)}>Home</Nav.Link>
+                    <Nav.Link as={Link} to="/testimonials" className="py-2" onClick={() => setExpanded(false)}>Testimonials</Nav.Link>
+                    <Nav.Link as={Link} to="/listings" className="py-2" onClick={() => setExpanded(false)}>Listings</Nav.Link>
+                    <Nav.Link as={Link} to="/sold" className="py-2" onClick={() => setExpanded(false)}>Sold</Nav.Link>
+                    <Nav.Link as={Link} to="/resources" className="py-2" onClick={() => setExpanded(false)}>Resources</Nav.Link>
+                    <Nav.Link as={Link} to="/contact" className="py-2" onClick={() => setExpanded(false)}>Contact</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+            </div>
+          </Container>
+        </div>
       </div>
 
       {/* Main Content */}

@@ -52,13 +52,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Tab-style navigation */
-.nav-tabs-container {
+.nav-tabs-wrapper {
+  width: 100%;
   border-bottom: 1px solid #dee2e6;
   margin-bottom: 1rem;
+  background: transparent;
+}
+
+.nav-tabs-container {
+  width: 100%;
+  background: transparent;
+}
+
+.nav-tabs-inner {
+  display: flex;
+  justify-content: flex-start;
+  background: transparent;
 }
 
 .navbar-custom {
   background-color: transparent !important;
+}
+
+/* Hide desktop navigation on mobile */
+@media (max-width: 767.98px) {
+  .nav-tabs {
+    display: none;
+  }
 }
 
 .nav-tabs {
@@ -76,26 +96,29 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid transparent;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  color: #495057 !important;
-  font-weight: 500;
+  color: #333 !important; /* Match the heading text color */
+  font-weight: 600; /* Bolder font */
   font-size: 1rem;
   text-decoration: none;
   background-color: #f8f9fa;
   margin-right: 0.25rem;
   transition: all 0.2s ease-in-out;
+  letter-spacing: 0.02em; /* Slightly increased letter spacing for modern look */
+  font-family: 'Roboto', sans-serif; /* Using Roboto for a more modern look */
 }
 
 .nav-tab:hover {
   border-color: #e9ecef #e9ecef #dee2e6;
   background-color: #e9ecef;
-  color: var(--light-blue-1) !important;
+  color: #333 !important; /* Match the heading text color */
 }
 
 .nav-tab.active,
 .nav-tab[aria-current="page"] {
-  color: var(--light-blue-1) !important;
+  color: #333 !important; /* Match the heading text color */
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
+  font-weight: 700; /* Even bolder for active tab */
 }
 
 /* Brand styling */
